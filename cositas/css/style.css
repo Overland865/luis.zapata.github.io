@@ -1,0 +1,263 @@
+/* --- Estilos Generales --- */
+body {
+    background-color: #FFFBEB; 
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh;       
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Título Superior --- */
+.titulo-principal {
+    color: #FFA000; 
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;         /* ¡LÍNEA AÑADIDA! */
+    z-index: 1;                 /* ¡LÍNEA AÑADIDA! */
+}
+
+/* --- Tarjeta de Presentación --- */
+.tarjeta-presentacion {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 950px; 
+    width: 90%;
+    padding: 40px;
+    position: relative;         /* ¡LÍNEA AÑADIDA! */
+    z-index: 1;                 /* ¡LÍNEA AÑADIDA! */
+}
+
+.tarjeta-contenido {
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+}
+
+/* --- Columna de la Imagen --- */
+.columna-imagen {
+    flex-shrink: 0; 
+}
+
+.columna-imagen img {
+    max-width: 300px; 
+    height: auto;
+    display: block; 
+}
+
+/* --- Columna del Texto --- */
+.columna-texto h2 {
+    color: #795548; 
+    margin-top: 0;
+}
+
+.columna-texto .texto-ascii {
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    color: #FFA000; 
+    font-weight: bold;
+}
+
+.columna-texto .texto-principal {
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #795548; 
+}
+
+/* --- Botón de Acción --- */
+.boton-accion {
+    display: inline-block; 
+    background-color: #FFC107; 
+    color: #795548;            
+    padding: 12px 25px;
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.2s ease; 
+    border: 2px solid transparent;
+}
+
+.boton-accion:hover {
+    transform: scale(1.05);
+    background-color: #FFFBEB;
+    border: 2px solid #FFC107;
+}
+
+/* --- ================================== --- */
+/* --- ==== FONDO ANIMADO DE FLORES ==== --- */
+/* --- ================================== --- */
+.contenedor-animacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.flor {
+    position: absolute;
+    bottom: -150px;
+    animation: flotar 20s linear infinite;
+}
+
+.flor::before {
+    content: '❀';
+    font-size: 24px;
+    color: rgba(255, 193, 7, 0.4);
+    position: absolute;
+    animation: rotar 10s linear infinite;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh); 
+        opacity: 0;
+    }
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- Hacemos que cada flor sea diferente (SIN DELAY) --- */
+.flor:nth-child(1) { left: 10%; animation-duration: 15s; }
+.flor:nth-child(1)::before { font-size: 60px; animation-duration: 8s; }
+.flor:nth-child(2) { left: 20%; animation-duration: 12s; }
+.flor:nth-child(2)::before { font-size: 35px; animation-duration: 12s; }
+.flor:nth-child(3) { left: 35%; animation-duration: 18s; }
+.flor:nth-child(3)::before { font-size: 50px; animation-duration: 10s; }
+.flor:nth-child(4) { left: 50%; animation-duration: 16s; }
+.flor:nth-child(4)::before { font-size: 40px; animation-duration: 7s; }
+.flor:nth-child(5) { left: 55%; animation-duration: 13s; }
+.flor:nth-child(5)::before { font-size: 55px; animation-duration: 11s; }
+.flor:nth-child(6) { left: 70%; animation-duration: 12s; }
+.flor:nth-child(6)::before { font-size: 38px; animation-duration: 9s; }
+.flor:nth-child(7) { left: 85%; animation-duration: 20s; }
+.flor:nth-child(7)::before { font-size: 48px; animation-duration: 15s; }
+.flor:nth-child(8) { left: 90%; animation-duration: 14s; }
+.flor:nth-child(8)::before { font-size: 32px; animation-duration: 6s; }
+.flor:जब(9) { left: 5%; animation-duration: 17s; }
+.flor:nth-child(9)::before { font-size: 42px; animation-duration: 13s; }
+.flor:nth-child(10) { left: 75%; animation-duration: 19s; }
+.flor:nth-child(10)::before { font-size: 52px; animation-duration: 9s; }
+.flor:nth-child(11) { left: 30%; animation-duration: 22s; }
+.flor:nth-child(11)::before { font-size: 35px; animation-duration: 10s; }
+.flor:nth-child(12) { left: 45%; animation-duration: 25s; }
+.flor:nth-child(12)::before { font-size: 55px; animation-duration: 14s; }
+.flor:nth-child(13) { left: 65%; animation-duration: 14s; }
+.flor:nth-child(13)::before { font-size: 45px; animation-duration: 8s; }
+.flor:nth-child(14) { left: 80%; animation-duration: 19s; }
+.flor:nth-child(14)::before { font-size: 30px; animation-duration: 11s; }
+.flor:nth-child(15) { left: 95%; animation-duration: 16s; }
+.flor:nth-child(15)::before { font-size: 50px; animation-duration: 9s; }
+
+/* --- ================================== --- */
+/* --- ==== ESTILOS PÁGINA "CARTA" ==== --- */
+/* --- ================================== --- */
+
+.grid-container {
+    display: grid;
+    /* CAMBIO: Columna 1 tiene 400px fijos, la 2da ocupa el resto */
+    grid-template-columns: 400px 1fr; 
+    /* CAMBIO: Filas 1 y 2 tienen 400px de alto para ser cuadradas */
+    grid-template-rows: 400px 400px auto; 
+    gap: 25px;
+    width: 90%;
+    max-width: 1100px;
+    position: relative;
+    z-index: 1;
+}
+
+.grid-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.item2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.item3 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.item4 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.boton-volver {
+    display: inline-block; 
+    background-color: #FFC107; 
+    color: #795548;            
+    padding: 12px 25px;
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: bold;
+    margin-top: 30px;
+    transition: all 0.2s ease; 
+    position: relative;
+    z-index: 1;
+}
+
+.boton-volver:hover {
+    transform: scale(1.05);
+}
+/* Aumenta el tamaño de la letra en el Recuadro 3 */
+.item3 p {
+    font-size: 1.1rem; /* Puedes cambiar este valor a tu gusto */
+    line-height: 1.7;  /* Aumenta el espacio entre líneas para que sea más legible */
+}
+/* --- Estilos para el contenido del Recuadro 4 (Versión Centrada) --- */
+
+.item4 {
+    text-align: center; /* ¡LA CLAVE! Centra todo el contenido */
+}
+
+/* Contenedor del marco para la imagen */
+.item4 .imagen-container {
+    max-height: 350px;  /* Altura máxima del marco */
+    overflow-y: auto;   /* ¡LA CLAVE! Agrega scroll si la imagen es más alta */
+    margin: 20px auto;  /* Centra el marco */
+    border-radius: 10px;
+}
+
+/* Ajustes para la imagen dentro del marco */
+.item4 .imagen-container img {
+    width: 100%;       /* La imagen siempre ocupa el 100% del ancho del marco */
+    display: block;    /* Elimina espacios extra */
+    border-radius: 10px;
+}
+
+.item4 .texto-centrado {
+    font-size: 1.1rem;
+    max-width: 600px; /* Evita que el texto sea demasiado ancho y difícil de leer */
+    margin-left: auto; /* Centra el bloque de texto */
+    margin-right: auto; /* Centra el bloque de texto */
+}
